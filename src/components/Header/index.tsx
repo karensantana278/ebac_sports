@@ -4,12 +4,9 @@ import { paraReal } from '../Produto'
 import { useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 
-
 const Header = () => {
-
   const produtos = useSelector((state: RootReducer) => state.carrinho.itens)
   const favoritos = useSelector((state: RootReducer) => state.favorito.itens)
-
 
   const valorTotal = produtos.reduce((acc, item) => {
     acc += item.preco
